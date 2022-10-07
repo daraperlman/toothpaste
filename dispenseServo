@@ -1,0 +1,25 @@
+#include <Servo.h>
+
+Servo servo_motor;
+
+Int IR_sensor_pin = 7;
+Int servo_motor_pin = 9;
+Int val;
+
+Void setup() {
+    pinMode(IR_sensor_pin, INPUT);
+    servo.attach(servo_motor_pin);
+}
+
+Void loop() {
+    val = digitalRead(IR_sensor_pin);
+
+    If (val==0) {
+servo.write(0); }
+    If (val==1) {
+servo.write(90); //write here degree of rotation for servo motor }
+}
+
+//Lessons learned:
+//Don’t leave important things exposed
+//Don’t let Reggie on mommys computer
